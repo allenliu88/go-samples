@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-samples-deployment
+  labels:
+    app: go-samples
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: go-samples
+  template:
+    metadata:
+      labels:
+        app: go-samples
+    spec:
+      containers:
+      - name: go-samples
+        image: allen88/go-samples:1.0.0
+        ports:
+        - containerPort: 8080
