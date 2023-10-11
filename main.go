@@ -32,7 +32,7 @@ func getAlbums(c *gin.Context) {
 }
 
 func index(c *gin.Context) {
-	c.String(http.StatusOK, fmt.Sprintf("Hello %s", runtime.Version()))
+	c.String(http.StatusOK, fmt.Sprintf("Hello %s, New Release!!!", runtime.Version()))
 }
 
 var (
